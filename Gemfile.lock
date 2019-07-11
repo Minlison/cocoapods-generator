@@ -1,85 +1,98 @@
 PATH
   remote: .
   specs:
-    cocoapods-generator (0.0.1)
-      cocoapods (>= 0.38.2)
+    cocoapods-generator-minlison (0.1.0)
+      cocoapods
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.5.1)
+    CFPropertyList (3.0.0)
+    activesupport (4.2.11.1)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    atomos (0.1.3)
     bacon (1.2.0)
-    claide (0.9.1)
-    cocoapods (0.39.0)
-      activesupport (>= 4.0.2)
-      claide (~> 0.9.1)
-      cocoapods-core (= 0.39.0)
-      cocoapods-downloader (~> 0.9.3)
-      cocoapods-plugins (~> 0.4.2)
-      cocoapods-search (~> 0.1.0)
-      cocoapods-stats (~> 0.6.2)
-      cocoapods-trunk (~> 0.6.4)
-      cocoapods-try (~> 0.5.1)
-      colored (~> 1.2)
+    claide (1.0.2)
+    cocoapods (1.7.4)
+      activesupport (>= 4.0.2, < 5)
+      claide (>= 1.0.2, < 2.0)
+      cocoapods-core (= 1.7.4)
+      cocoapods-deintegrate (>= 1.0.3, < 2.0)
+      cocoapods-downloader (>= 1.2.2, < 2.0)
+      cocoapods-plugins (>= 1.0.0, < 2.0)
+      cocoapods-search (>= 1.0.0, < 2.0)
+      cocoapods-stats (>= 1.0.0, < 2.0)
+      cocoapods-trunk (>= 1.3.1, < 2.0)
+      cocoapods-try (>= 1.1.0, < 2.0)
+      colored2 (~> 3.1)
       escape (~> 0.0.4)
-      molinillo (~> 0.4.0)
+      fourflusher (>= 2.3.0, < 3.0)
+      gh_inspector (~> 1.0)
+      molinillo (~> 0.6.6)
       nap (~> 1.0)
-      xcodeproj (~> 0.28.2)
-    cocoapods-core (0.39.0)
-      activesupport (>= 4.0.2)
+      ruby-macho (~> 1.4)
+      xcodeproj (>= 1.10.0, < 2.0)
+    cocoapods-core (1.7.4)
+      activesupport (>= 4.0.2, < 6)
       fuzzy_match (~> 2.0.4)
       nap (~> 1.0)
-    cocoapods-downloader (0.9.3)
-    cocoapods-plugins (0.4.2)
+    cocoapods-deintegrate (1.0.4)
+    cocoapods-downloader (1.2.2)
+    cocoapods-plugins (1.0.0)
       nap
-    cocoapods-search (0.1.0)
-    cocoapods-stats (0.6.2)
-    cocoapods-trunk (0.6.4)
+    cocoapods-search (1.0.0)
+    cocoapods-stats (1.1.0)
+    cocoapods-trunk (1.3.1)
       nap (>= 0.8, < 2.0)
-      netrc (= 0.7.8)
-    cocoapods-try (0.5.1)
-    colored (1.2)
+      netrc (~> 0.11)
+    cocoapods-try (1.1.0)
+    colored2 (3.1.2)
+    concurrent-ruby (1.1.5)
     escape (0.0.4)
+    fourflusher (2.3.1)
     fuzzy_match (2.0.4)
-    i18n (0.7.0)
-    json (1.8.3)
+    gh_inspector (1.1.3)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     metaclass (0.0.4)
-    minitest (5.8.4)
-    mocha (1.1.0)
+    minitest (5.11.3)
+    mocha (1.9.0)
       metaclass (~> 0.0.1)
-    mocha-on-bacon (0.2.2)
+    mocha-on-bacon (0.2.3)
       mocha (>= 0.13.0)
-    molinillo (0.4.3)
+    molinillo (0.6.6)
+    nanaimo (0.2.6)
     nap (1.1.0)
-    netrc (0.7.8)
+    netrc (0.11.0)
     prettybacon (0.0.2)
       bacon (~> 1.2)
-    rake (10.5.0)
-    thread_safe (0.3.5)
-    tzinfo (1.2.2)
+    rake (12.3.2)
+    ruby-macho (1.4.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    xcodeproj (0.28.2)
-      activesupport (>= 3)
-      claide (~> 0.9.1)
-      colored (~> 1.2)
+    xcodeproj (1.11.0)
+      CFPropertyList (>= 2.3.3, < 4.0)
+      atomos (~> 0.1.3)
+      claide (>= 1.0.2, < 2.0)
+      colored2 (~> 3.1)
+      nanaimo (~> 0.2.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bacon
-  bundler (~> 1.3)
+  bundler
   cocoapods
-  cocoapods-generator!
+  cocoapods-generator-minlison!
   mocha
   mocha-on-bacon
   prettybacon
   rake
 
 BUNDLED WITH
-   1.11.2
+   1.17.3

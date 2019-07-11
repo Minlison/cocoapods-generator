@@ -15,7 +15,7 @@ module Pod
     # - edit `lib/cocoapods_plugins.rb` to require this file
     #
 
-    class Generator < Command
+    class GeneratorProj < Command
       self.summary = 'add source files to project from podspec.'
 
       self.description = <<-DESC
@@ -26,7 +26,7 @@ module Pod
         2. Please make sure project name same to spec_name, else can't find *.xcodeproj file.
       DESC
 
-      self.arguments = [CLAide::Argument.new('spec_name', true)]
+      self.arguments = [CLAide::Argument.new('spec_name', true), CLAide::Argument.new('lint', false)]
 
 
       SPEC_SUBGROUPS = {
@@ -45,6 +45,7 @@ module Pod
 
       def initialize(argv)
         @spec_name = argv.shift_argument
+        @lint_project = argv.shift_argument
         @current_path = Dir.pwd
         @spec_path = @current_path + '/' + @spec_name if @current_path && @spec_name
         super
@@ -66,6 +67,9 @@ module Pod
       end
 
       def validatePodspec
+        if @lint_project.nil? || @lint_project == 'no'
+          return
+        end
         linter = Specification::Linter.new(@spec_path)
         linter.lint
         results = []

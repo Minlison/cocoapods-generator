@@ -1,1 +1,1 @@
-require 'cocoapods-generator/command'
+require 'cocoapods-generator-minlison/command'
